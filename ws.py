@@ -35,7 +35,7 @@ async def broadcast_loop():
 
 async def main():
     # start websocket server and broadcast reader concurrently
-    async with websockets.serve(echo, "0.0.0.0", 8765):
+    async with websockets.serve(echo, "0.0.0.0", 10000):
         await broadcast_loop()
 
 if __name__ == "__main__":
